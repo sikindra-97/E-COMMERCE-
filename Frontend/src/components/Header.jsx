@@ -1,3 +1,4 @@
+
 // import { Link, useNavigate } from 'react-router-dom'
 // import { FaShoppingCart, FaBars, FaTimes } from 'react-icons/fa'
 // import { useState } from 'react'
@@ -98,11 +99,12 @@
 
 
 
+
 import { Link, useNavigate } from 'react-router-dom'
 import { FaShoppingCart, FaBars, FaTimes } from 'react-icons/fa'
 import { useState } from 'react'
 
-const Header = ({ cartCount }) => {
+const Header = ({ cartCount, searchText, setSearchText }) => {
   const token = localStorage.getItem('token')
   const navigate = useNavigate()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -122,8 +124,19 @@ const Header = ({ cartCount }) => {
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold">Loot Bazar</Link>
 
+        {/* Search Bar */}
+        <div className="hidden md:flex items-center mx-4 flex-grow max-w-md">
+          <input
+            type="text"
+            placeholder="Search products..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+            className="w-full px-4 py-2 rounded-lg border border-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          />
+        </div>
+
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex space-x-6 ml-6">
           <Link to="/" className="hover:text-yellow-300">Home</Link>
           <Link to="/electronics" className="hover:text-yellow-300">Electronics</Link>
           <Link to="/male" className="hover:text-yellow-300">Male</Link>
@@ -133,14 +146,7 @@ const Header = ({ cartCount }) => {
           <Link to="/contact" className="hover:text-yellow-300">Contact</Link>
         </nav>
 
-        {/* Mobile Menu Toggle */}
-        <div className="md:hidden flex items-center">
-          <button onClick={toggleMobileMenu}>
-            {isMobileMenuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
-          </button>
-        </div>
-
-        {/* Cart and Auth */}
+        {/* Cart + Auth */}
         <div className="hidden md:flex items-center space-x-4">
           <Link to="/cart" className="relative">
             <FaShoppingCart className="text-xl" />
@@ -159,11 +165,25 @@ const Header = ({ cartCount }) => {
             </>
           )}
         </div>
+
+        {/* Mobile Toggle */}
+        <div className="md:hidden flex items-center">
+          <button onClick={toggleMobileMenu}>
+            {isMobileMenuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Menu Links */}
+      {/* Mobile Nav */}
       {isMobileMenuOpen && (
         <div className="md:hidden flex flex-col items-start bg-gray-700 px-6 py-4 space-y-3">
+          <input
+            type="text"
+            placeholder="Search products..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+            className="w-full px-4 py-2 rounded-md border text-black border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          />
           <Link to="/" className="hover:text-yellow-300" onClick={toggleMobileMenu}>Home</Link>
           <Link to="/electronics" className="hover:text-yellow-300" onClick={toggleMobileMenu}>Electronics</Link>
           <Link to="/male" className="hover:text-yellow-300" onClick={toggleMobileMenu}>Male</Link>
