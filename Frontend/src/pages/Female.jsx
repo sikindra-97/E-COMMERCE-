@@ -66,11 +66,15 @@ const Female = ({ addToCart, searchText }) => {
           Stylish and elegant picks for women.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
-          {filtered.map((product) => (
-            <ProductCard key={product.id} product={product} addToCart={addToCart} />
-          ))}
-        </div>
+        {filtered.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
+            {filtered.map((product) => (
+              <ProductCard key={product.id} product={product} addToCart={addToCart} />
+            ))}
+          </div>
+        ) : (
+          <p className="text-center text-gray-500 text-lg">No products match your search.</p>
+        )}
       </div>
     </div>
   )

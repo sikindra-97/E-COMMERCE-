@@ -46,8 +46,16 @@ const Male = ({ addToCart, searchText }) => {
     },
   ]
 
-  const filtered = products.filter(product =>
-    product.name.toLowerCase().includes(searchText.toLowerCase())
+  const formattedProducts = products.map((p) => ({
+    id: p._id,
+    title: p.name,
+    price: p.price,
+    image: p.images[0],
+    rating: p.rating,
+  }))
+
+  const filtered = formattedProducts.filter((product) =>
+    product.title.toLowerCase().includes(searchText.toLowerCase())
   )
 
   return (
@@ -58,11 +66,15 @@ const Male = ({ addToCart, searchText }) => {
           Trendy and comfortable fashion essentials for men.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
-          {filtered.map(product => (
-            <ProductCard key={product._id} product={product} addToCart={addToCart} />
-          ))}
-        </div>
+        {filtered.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
+            {filtered.map((product) => (
+              <ProductCard key={product.id} product={product} addToCart={addToCart} />
+            ))}
+          </div>
+        ) : (
+          <p className="text-center text-gray-500 text-lg">No products match your search.</p>
+        )}
       </div>
     </div>
   )

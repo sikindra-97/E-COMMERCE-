@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+
+import { useEffect, useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
 import axios from 'axios'
@@ -9,7 +10,6 @@ const Home = ({ addToCart, searchText }) => {
   const navigate = useNavigate()
 
   const customRawProducts = [
-    // ELECTRONICS
     {
       _id: '1',
       name: 'Wired Headphones',
@@ -156,34 +156,46 @@ const Home = ({ addToCart, searchText }) => {
     },
   ]
 
-  // Convert structure to fit ProductCard component
-  const customProducts = customRawProducts.map((product) => ({
-    id: product._id,
-    title: product.name,
-    price: product.price,
-    image: product.images[0],
-    rating: product.rating,
-  }))
+  const customProducts = useMemo(() => {
+    return customRawProducts.map((product) => ({
+      id: product._id,
+      title: product.name,
+      price: product.price,
+      image: product.images[0],
+      rating: product.rating,
+    }))
+  }, [])
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const { data } = await axios.get('https://fakestoreapi.com/products?limit=20')
-        setApiProducts(data)
-        setLoading(false)
+        const formatted = data.map((item) => ({
+          id: item.id,
+          title: item.title,
+          price: item.price,
+          image: item.image,
+          rating: item.rating,
+        }))
+        setApiProducts(formatted)
       } catch (error) {
         console.error('Error fetching products:', error)
+      } finally {
         setLoading(false)
       }
     }
+
     fetchProducts()
   }, [])
 
-  const allProducts = [...apiProducts, ...customProducts]
+  const allProducts = useMemo(() => [...apiProducts, ...customProducts], [apiProducts, customProducts])
 
-  const filteredProducts = allProducts.filter((product) =>
-    product.title.toLowerCase().includes(searchText.trim().toLowerCase())
-  )
+  const filteredProducts = useMemo(() => {
+    if (!searchText) return allProducts
+    return allProducts.filter((product) =>
+      product.title.toLowerCase().includes(searchText.toLowerCase())
+    )
+  }, [allProducts, searchText])
 
   if (loading) {
     return (
@@ -214,12 +226,8 @@ const Home = ({ addToCart, searchText }) => {
 
         {filteredProducts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {filteredProducts.map(product => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                addToCart={addToCart}
-              />
+            {filteredProducts.map((product) => (
+              <ProductCard key={product.id} product={product} addToCart={addToCart} />
             ))}
           </div>
         ) : (
