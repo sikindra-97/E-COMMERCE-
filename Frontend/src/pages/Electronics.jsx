@@ -39,14 +39,14 @@ const Electronics = ({ addToCart, searchText }) => {
     },
     {
       _id: '6',
-      name: 'Laptop (14" i5, 8GB RAM)',
+      name: 'Laptop (14\" i5, 8GB RAM)',
       price: 45999,
       images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZqQJRLgY5_ld2Uzk6zH7yQ-9wJiQpMTSQbA&s'],
       rating: { rate: 4.6, count: 210 },
     },
     {
       _id: '7',
-      name: 'Tablet (10.1" Android)',
+      name: 'Tablet (10.1\" Android)',
       price: 8999,
       images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdwXHFBNYZTrTzJdWtVKYPiVjBqZO1ML4jqw&s'],
       rating: { rate: 4.2, count: 130 },
@@ -61,7 +61,7 @@ const Electronics = ({ addToCart, searchText }) => {
   ]
 
   const filtered = products.filter(product =>
-    product.name.toLowerCase().includes(searchText.toLowerCase())
+    product.name.toLowerCase().includes(searchText.trim().toLowerCase())
   )
 
   return (
@@ -72,11 +72,15 @@ const Electronics = ({ addToCart, searchText }) => {
           Discover the latest and most trusted electronic gadgets at unbeatable prices.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
-          {filtered.map(product => (
-            <ProductCard key={product._id} product={product} addToCart={addToCart} />
-          ))}
-        </div>
+        {filtered.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
+            {filtered.map(product => (
+              <ProductCard key={product._id} product={product} addToCart={addToCart} />
+            ))}
+          </div>
+        ) : (
+          <p className="text-center text-gray-500 text-lg">No products match your search.</p>
+        )}
       </div>
     </div>
   )

@@ -46,8 +46,16 @@ const Female = ({ addToCart, searchText }) => {
     },
   ]
 
-  const filtered = products.filter(product =>
-    product.name.toLowerCase().includes(searchText.toLowerCase())
+  const formattedProducts = products.map((p) => ({
+    id: p._id,
+    title: p.name,
+    price: p.price,
+    image: p.images[0],
+    rating: p.rating,
+  }))
+
+  const filtered = formattedProducts.filter((product) =>
+    product.title.toLowerCase().includes(searchText.toLowerCase())
   )
 
   return (
@@ -55,12 +63,12 @@ const Female = ({ addToCart, searchText }) => {
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-extrabold text-center text-pink-600 mb-2">Women's Collection</h2>
         <p className="text-center text-gray-600 mb-10 text-lg">
-          Stylish picks for every modern woman.
+          Stylish and elegant picks for women.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
-          {filtered.map(product => (
-            <ProductCard key={product._id} product={product} addToCart={addToCart} />
+          {filtered.map((product) => (
+            <ProductCard key={product.id} product={product} addToCart={addToCart} />
           ))}
         </div>
       </div>
