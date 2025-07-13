@@ -1,7 +1,7 @@
-
 import { Link } from 'react-router-dom'
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
+// Custom X (Twitter) Icon
 const XIcon = ({ size = 20, className = '' }) => (
   <svg
     className={className}
@@ -26,12 +26,15 @@ const Footer = () => {
     <footer className="bg-gray-800 text-white py-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Brand Info */}
           <div>
             <h3 className="text-xl font-bold mb-4">Loot Bazar</h3>
             <p className="text-gray-400">
               Your one-stop shop for all your needs. Quality products at affordable prices.
             </p>
           </div>
+
+          {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
@@ -44,6 +47,8 @@ const Footer = () => {
               <li><Link to="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
             </ul>
           </div>
+
+          {/* Customer Service */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Customer Service</h4>
             <ul className="space-y-2">
@@ -53,11 +58,13 @@ const Footer = () => {
               <li><Link to="/privacy" className="text-gray-400 hover:text-white">Privacy Policy</Link></li>
             </ul>
           </div>
+
+          {/* Social Media */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
             <div className="flex space-x-4">
               <a
-                href="https://www.facebook.com/satyamjaihind1"
+                href="https://www.facebook.com/s.chauhan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white"
@@ -67,7 +74,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://x.com/SatyamP26019081?t=FFShqJglY4xQnHJDR27oZw&s=09"
+                href="https://x.com/sikindra05"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white"
@@ -76,28 +83,30 @@ const Footer = () => {
                 <XIcon size={20} />
               </a>
 
-              <a
-                href="https://www.instagram.com/satyamjaihind1?igsh=MXF1MG9oNnMzbG9vZw=="
+             <a
+               href="https://www.instagram.com/s.chauhan97/"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white"
-                aria-label="Instagram"
-              >
+                    rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white"
+                      aria-label="Instagram"
+                    >
                 <FaInstagram size={20} />
               </a>
 
               <a
-                href="https://www.linkedin.com/in/satyam-parashar-ab080732b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white"
-                aria-label="LinkedIn"
-              >
+  href="https://www.linkedin.com/in/sikindra05/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-gray-400 hover:text-white"
+  aria-label="LinkedIn"
+>
                 <FaLinkedin size={20} />
               </a>
             </div>
           </div>
         </div>
+
+        {/* Footer Bottom */}
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} Loot Bazar. All rights reserved.</p>
         </div>

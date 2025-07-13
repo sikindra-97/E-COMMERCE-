@@ -48,7 +48,7 @@ const Checkout = ({ cart, clearCart }) => {
 
       try {
         // Razorpay expects amount in paise (1 INR = 100 paise)
-        const res = await axios.post('http://localhost:3000/api/payment/create-order', {
+        const res = await axios.post('http://localhost:5000/api/payment/create-order', {
       amount: totalPriceINR  // sending plain INR (e.g., 22.30)
         })
 

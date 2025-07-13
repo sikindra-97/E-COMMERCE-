@@ -1,56 +1,14 @@
 import ProductCard from '../components/ProductCard'
+import productData from '../data/productData.json'
 
 const Female = ({ addToCart, searchText }) => {
-  const products = [
-    {
-      _id: '1',
-      name: 'Women Dress',
-      price: 999,
-      images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzeqsaxEBHAJhzed3x7IxEwSYEGD409LC5Kg&s'],
-      rating: { rate: 4.6, count: 150 },
-    },
-    {
-      _id: '2',
-      name: 'Ladies Handbag',
-      price: 749,
-      images: ['https://m.media-amazon.com/images/I/71cwDsjwnaL._UY1000_.jpg'],
-      rating: { rate: 4.5, count: 130 },
-    },
-    {
-      _id: '3',
-      name: 'High Heels',
-      price: 1299,
-      images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLbrWgsYewL9PWsezXm7RaRnoEkpWrcmQ2bw&s'],
-      rating: { rate: 4.3, count: 90 },
-    },
-    {
-      _id: '4',
-      name: 'Sunglasses',
-      price: 599,
-      images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY3hd2ZxkwWPX7FdIihMZonaNXaSJpuk-X_A&s'],
-      rating: { rate: 4.2, count: 80 },
-    },
-    {
-      _id: '5',
-      name: 'Scarf',
-      price: 399,
-      images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgTQkbkJ2UuRp8AaGxI4pFEZoFXJZo4xACNQ&s'],
-      rating: { rate: 4.0, count: 65 },
-    },
-    {
-      _id: '6',
-      name: 'Women’s Sandals',
-      price: 899,
-      images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFZVmdkCzSoJIswcyIZneElSUPPaBhX8jkpg&s'],
-      rating: { rate: 4.1, count: 100 },
-    },
-  ]
+  const products = productData.filter(p => p.category === 'female') // ✅ fixed here
 
   const formattedProducts = products.map((p) => ({
-    id: p._id,
-    title: p.name,
+    id: p.id || p._id,
+    title: p.name || p.title,
     price: p.price,
-    image: p.images[0],
+    image: p.images ? p.images[0] : p.image,
     rating: p.rating,
   }))
 

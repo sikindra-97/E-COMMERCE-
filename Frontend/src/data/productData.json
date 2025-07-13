@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "title": "Wired Headphones",
+    "image": "https://tse4.mm.bing.net/th/id/OIP.TjkB1C1YWb9m5I6eLQW6lQHaH2?pid=Api&P=0&h=180",
+    "description": "High-quality wired headphones with immersive sound and comfort.",
+    "price": 55.99,
+    "rating": 4.7,
+    "reviewCount": 500,
+    "category": "electronics"
+  },
+  {
+    "id": 2,
+    "title": "Smartphone",
+    "image": "https://tse4.mm.bing.net/th/id/OIP.2okfUiCk7jr6XJLuZW90HwHaHa?pid=Api&P=0&h=180",
+    "description": "Modern smartphone with fast performance and stunning display.",
+    "price": 15999,
+    "rating": 4.6,
+    "reviewCount": 230,
+    "category": "electronics"
+  },
+  {
+    "id": 3,
+    "title": "Bluetooth Speaker",
+    "image": "https://in.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw4b7e6f14/JBL_GO_4_3_4_LEFT_BLUE_48173_x1.png?sw=535&sh=535",
+    "description": "Portable speaker with powerful sound and Bluetooth connectivity.",
+    "price": 1299,
+    "rating": 4.3,
+    "reviewCount": 95,
+    "category": "electronics"
+  },
+  {
+    "id": 4,
+    "title": "Smart Watch",
+    "image": "https://cdn.mos.cms.futurecdn.net/v2/t:0,l:0,cw:2000,ch:1125,q:80,w:2000/FkGweMeB7hdPgaSFQdgsfj.jpg",
+    "description": "Stylish smartwatch with fitness tracking and notifications.",
+    "price": 1999,
+    "rating": 4.0,
+    "reviewCount": 140,
+    "category": "electronics"
+  },
+  {
+    "id": 5,
+    "title": "Wireless Earbuds",
+    "image": "https://www.boat-lifestyle.com/cdn/shop/files/ACCG6DS7WDJHGWSH_0.png?v=1727669669",
+    "description": "Compact wireless earbuds with great sound and battery life.",
+    "price": 2499,
+    "rating": 4.5,
+    "reviewCount": 180,
+    "category": "electronics"
+  },
+  {
+    "id": 6,
+    "title": "Laptop (14\" i5, 8GB RAM)",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZqQJRLgY5_ld2Uzk6zH7yQ-9wJiQpMTSQbA&s",
+    "description": "Powerful laptop ideal for work, study, and entertainment.",
+    "price": 45999,
+    "rating": 4.6,
+    "reviewCount": 210,
+    "category": "electronics"
+  },
+  {
+    "id": 7,
+    "title": "Tablet (10.1\" Android)",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdwXHFBNYZTrTzJdWtVKYPiVjBqZO1ML4jqw&s",
+    "description": "Lightweight Android tablet for browsing, media, and apps.",
+    "price": 8999,
+    "rating": 4.2,
+    "reviewCount": 130,
+    "category": "electronics"
+  },
+  {
+    "id": 8,
+    "title": "Power Bank 20000mAh",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfv1-HcDMP0zhAMUWqOTSO-1t66vFKvNZ2-g&s",
+    "description": "High-capacity power bank for multiple device charges.",
+    "price": 1399,
+    "rating": 4.4,
+    "reviewCount": 160,
+    "category": "electronics"
+  },
+  {
+    "id": 9,
+    "title": "Women Dress",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzeqsaxEBHAJhzed3x7IxEwSYEGD409LC5Kg&s",
+    "description": "Elegant and comfortable dress perfect for any occasion.",
+    "price": 999,
+    "rating": 4.6,
+    "reviewCount": 150,
+    "category": "female"
+  },
+  {
+    "id": 10,
+    "title": "Ladies Handbag",
+    "image": "https://m.media-amazon.com/images/I/71cwDsjwnaL._UY1000_.jpg",
+    "description": "Trendy and spacious handbag to complement any outfit.",
+    "price": 749,
+    "rating": 4.5,
+    "reviewCount": 130,
+    "category": "female"
+  },
+  {
+    "id": 11,
+    "title": "High Heels",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLbrWgsYewL9PWsezXm7RaRnoEkpWrcmQ2bw&s",
+    "description": "Stylish high heels for a confident and chic look.",
+    "price": 1299,
+    "rating": 4.3,
+    "reviewCount": 90,
+    "category": "female"
+  },
+  {
+    "id": 12,
+    "title": "Sunglasses",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY3hd2ZxkwWPX7FdIihMZonaNXaSJpuk-X_A&s",
+    "description": "UV-protected sunglasses for style and sun safety.",
+    "price": 599,
+    "rating": 4.2,
+    "reviewCount": 80,
+    "category": "female"
+  },
+  {
+    "id": 13,
+    "title": "Scarf",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgTQkbkJ2UuRp8AaGxI4pFEZoFXJZo4xACNQ&s",
+    "description": "Soft and fashionable scarf for year-round wear.",
+    "price": 399,
+    "rating": 4.0,
+    "reviewCount": 65,
+    "category": "female"
+  },
+  {
+    "id": 14,
+    "title": "Women’s Sandals",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFZVmdkCzSoJIswcyIZneElSUPPaBhX8jkpg&s",
+    "description": "Comfortable and elegant sandals for casual outings.",
+    "price": 899,
+    "rating": 4.1,
+    "reviewCount": 100,
+    "category": "female"
+  },
+  {
+    "id": 15,
+    "title": "Men T-Shirt",
+    "image": "https://tse2.mm.bing.net/th/id/OIP.ryvGFpkU99mutbVUNr16QgHaJ4?pid=Api&P=0&h=180",
+    "description": "Casual and breathable T-shirt for everyday wear.",
+    "price": 499,
+    "rating": 4.3,
+    "reviewCount": 120,
+    "category": "male"
+  },
+  {
+    "id": 16,
+    "title": "Formal Shoes",
+    "image": "https://tse2.mm.bing.net/th/id/OIP.3tPGrEe0uSq44jgy5DuD6AHaHH?pid=Api&P=0&h=180",
+    "description": "Classic formal shoes ideal for office and events.",
+    "price": 1499,
+    "rating": 4.5,
+    "reviewCount": 98,
+    "category": "male"
+  },
+  {
+    "id": 17,
+    "title": "Leather Jacket",
+    "image": "https://tse1.mm.bing.net/th/id/OIP.I019usArj88hE-CtLgWJuAHaH6?pid=Api&P=0&h=180",
+    "description": "Premium leather jacket with rugged style and warmth.",
+    "price": 2999,
+    "rating": 4.6,
+    "reviewCount": 85,
+    "category": "male"
+  },
+  {
+    "id": 18,
+    "title": "Wrist Watch",
+    "image": "https://tse1.mm.bing.net/th/id/OIP.9yIzTo0ZZywp9i2dRTIgCwHaHa?pid=Api&P=0&h=180",
+    "description": "Elegant wrist watch for everyday and formal use.",
+    "price": 999,
+    "rating": 4.1,
+    "reviewCount": 110,
+    "category": "male"
+  },
+  {
+    "id": 19,
+    "title": "Casual Sneakers",
+    "image": "https://tse3.mm.bing.net/th/id/OIP.-MFGWbUWjQpeHC61RgGIJgHaHa?pid=Api&P=0&h=180",
+    "description": "Trendy sneakers that combine comfort and style.",
+    "price": 1799,
+    "rating": 4.4,
+    "reviewCount": 140,
+    "category": "male"
+  },
+  {
+    "id": 20,
+    "title": "Denim Jeans",
+    "image": "https://tse2.mm.bing.net/th/id/OIP.ZDNsAvWznF6A21RdSjzmGgHaHa?pid=Api&P=0&h=180",
+    "description": "Durable and stylish jeans perfect for any season.",
+    "price": 1199,
+    "rating": 4.2,
+    "reviewCount": 125,
+    "category": "male"
+  }
+]

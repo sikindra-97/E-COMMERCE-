@@ -164,8 +164,8 @@ const Contact = () => {
                 <FaEnvelope className="text-blue-600 mt-1 mr-3" />
                 <div>
                   <h3 className="font-medium">Email</h3>
-                  <p className="text-gray-600">satyampr76@gmail.com</p>
-                  <p className="text-gray-600">sprashar744@gmail.com</p>
+                  <p className="text-gray-600">sikindrak884@gmail.com</p>
+               
                 </div>
               </div>
               <div className="flex items-start">
