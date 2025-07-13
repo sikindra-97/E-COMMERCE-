@@ -1,6 +1,6 @@
 import axios from 'axios'
 const axiosClient = axios.create({
- baseURL: 'http://localhost:5000/api', 
+ baseURL:'https://e-commerce-50h1.onrender.com/api', 
   headers: {
     'Content-Type': 'application/json',
   },
